@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Lớp nền -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="5dp" />
+            <solid android:color="@color/progress_background_color" />
+        </shape>
+    </item>
+
+    <!-- Lớp tiến trình -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="5dp" />
+                <!--
+                  ============================================================
+                  GIỮ NGUYÊN angle="0" (TRÁI SANG PHẢI)
+                  ============================================================
+                  - Dải màu sẽ đi từ TRÁI (Xanh) sang PHẢI (Đỏ).
+                  - Thuộc tính android:rotation="270" trong file layout sẽ
+                    xoay toàn bộ ProgressBar, biến TRÁI thành TRÊN và PHẢI thành DƯỚI.
+                -->
+                <gradient
+                    android:angle="0"
+                    android:startColor="@color/progress_start_color"
+                    android:centerColor="@color/progress_center_color"
+                    android:endColor="@color/progress_end_color"
+                    android:type="linear" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

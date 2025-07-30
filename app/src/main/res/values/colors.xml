@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Các màu bạn đã có -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- THÊM CÁC MÀU CHO THANH THỜI GIAN -->
+    <color name="progress_start_color">#4CAF50</color> <!-- Xanh lá cây -->
+    <color name="progress_center_color">#FFEB3B</color> <!-- Vàng -->
+    <color name="progress_end_color">#F44336</color>   <!-- Đỏ -->
+    <color name="progress_background_color">#E0E0E0</color> <!-- Xám nhạt -->
+</resources>

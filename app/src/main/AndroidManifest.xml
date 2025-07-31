@@ -16,14 +16,14 @@
             android:name=".GameActivity"
             android:exported="true"
             android:screenOrientation="sensorLandscape"
-        android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-        tools:ignore="LockedOrientationActivity">
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            tools:ignore="LockedOrientationActivity">
 
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-</application>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
-    </manifest>
+</manifest>

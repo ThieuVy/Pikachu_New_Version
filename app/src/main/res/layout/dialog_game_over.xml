@@ -2,13 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="400dp"
     android:layout_height="wrap_content"
-    android:layout_margin="32dp"
     android:padding="24dp"
     android:background="@drawable/dialog_background">
 
-    <!-- Icon ở trên cùng -->
+    <!-- Icon (ví dụ: hình Froakie) -->
     <ImageView
         android:id="@+id/iv_dialog_icon"
         android:layout_width="48dp"
@@ -16,12 +15,13 @@
         android:src="@drawable/img_17"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="ContentDescription" />
 
-    <!-- Tiêu đề -->
+    <!-- Tiêu đề chính -->
     <TextView
         android:id="@+id/tv_dialog_title"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Hết Giờ!"
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toBottomOf="@id/iv_dialog_icon"
         tools:ignore="HardcodedText" />
 
-    <!-- Nội dung -->
+    <!-- Nội dung mô tả -->
     <TextView
         android:id="@+id/tv_dialog_message"
         android:layout_width="0dp"
@@ -42,40 +42,46 @@
         android:text="Bạn đã không hoàn thành màn chơi. Bạn có muốn chơi lại không?"
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_dialog_title"
         tools:ignore="HardcodedText" />
+
+        <!-- Hai nút bấm được đặt cạnh nhau -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
     <!-- Nút Thoát Game -->
     <Button
         android:id="@+id/btn_dialog_exit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_weight="1"
         android:layout_marginEnd="8dp"
         android:text="Thoát Game"
         android:textColor="@android:color/black"
         android:background="@drawable/button_outline_background"
-        app:layout_constraintEnd_toStartOf="@+id/btn_dialog_replay"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_dialog_message"
-        tools:ignore="HardcodedText" />
+        tools:ignore="ButtonStyle,HardcodedText" />
 
     <!-- Nút Chơi Lại -->
     <Button
         android:id="@+id/btn_dialog_replay"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:layout_marginStart="8dp"
         android:text="Chơi Lại"
         android:textColor="@android:color/white"
         android:background="@drawable/button_solid_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_dialog_exit"
-        app:layout_constraintTop_toTopOf="@+id/btn_dialog_exit"
-        tools:ignore="HardcodedText" />
+        tools:ignore="ButtonStyle,HardcodedText" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

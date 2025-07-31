@@ -31,7 +31,7 @@ import java.util.List;
 public class GameActivity extends AppCompatActivity {
 
     // Chế độ Debug: Thay đổi số này để nhảy đến màn muốn test
-    private static final int DEBUG_START_LEVEL = 15;
+    private static final int DEBUG_START_LEVEL = 1;
 
     // --- Cấu hình Game ---
     private static final int TOTAL_ROWS = 9;
